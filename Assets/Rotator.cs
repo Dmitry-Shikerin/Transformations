@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereMover : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _speed;
     
     void Update()
     {
-        Move();
+        Rotate();
     }
 
-    private void Move()
+    private void Rotate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * _speed);
+        transform.Rotate(0, 0.5f * Time.deltaTime * _speed, 0);
     }
 }
